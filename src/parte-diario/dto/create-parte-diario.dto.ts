@@ -17,8 +17,8 @@ export class CreateParteDiarioDto {
     horas: number;
 
     @IsString()
-    @IsIn(['NORMAL', 'RETRASADO', 'INCIDENTE'], {
-        message: 'El estado debe ser NORMAL, RETRASADO o INCIDENTE',
+    @IsIn(['NORMAL', 'RETRASADO', 'INCIDENTE', 'FINALIZADO'], {
+        message: 'El estado debe ser NORMAL, RETRASADO, INCIDENTE o FINALIZADO',
     })
     estado: string;
 

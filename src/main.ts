@@ -16,9 +16,18 @@ async function bootstrap() {
     }),
   );
 
-  app.setGlobalPrefix('api')
+  app.setGlobalPrefix('api');
 
-  await app.listen(3000);
+  // CORS
+  app.enableCors({
+    origin: true,
+    credentials: true,
+  });
+
+  const port = process.env.PORT || 3000;
+  await app.listen(port);
+
   console.log(`Aplicación corriendo en: ${await app.getUrl()}`);
 }
+
 bootstrap();

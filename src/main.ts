@@ -20,7 +20,7 @@ async function bootstrap() {
 
   // CORS
   app.enableCors({
-    origin: true,
+    origin: 'https://daily-report-obra.netlify.app',
     credentials: true,
   });
 
